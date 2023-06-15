@@ -1,0 +1,85 @@
+html{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #222;
+    color: gray;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+div{
+    width: 20vw;
+    max-width: 250px;
+    height: 75vh;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 0.5rem;
+    filter: grayscale(1) opacity(0.1) contrast(200%);
+    transition: 0.5s;
+    transform: skewY(-10deg);
+    z-index: -1;
+}
+
+div:nth-child(1){
+    background-image: url('img/Outlast.png');
+}
+
+div:nth-child(2){
+    background-image: url('img/CODMW.png');
+}
+
+div:nth-child(3){
+    background-image: url('img/Mine.png');
+}
+
+div:nth-child(4){
+    background-image: url('img/DiabloIV.png');
+}
+
+div:nth-child(5){
+    background-image: url('img/StarWarsSurvivor.png');
+}
+
+.hover{
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px black;
+    z-index: 8888;
+}
+
+div:nth-child(1)::after,
+div:nth-child(2)::after,
+div:nth-child(3)::after,
+div:nth-child(4)::after,
+div:nth-child(5)::after{
+    content: "TERROR";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px #555;
+}
+
+div:nth-child(2)::after{
+    content: "MULTIPLAYER";
+}
+
+div:nth-child(3)::after{
+    content: "AVENTURA";
+}
+
+div:nth-child(4)::after{
+    content: "RPG";
+}
+
+div:nth-child(5)::after{
+    content: "AÇÃO";
+}
+
